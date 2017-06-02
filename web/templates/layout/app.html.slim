@@ -21,16 +21,16 @@ html lang='en'
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a href='/' class='navbar-brand'
+                    a href=page_path(@conn,:index) class='navbar-brand'
                         img src='images/logo.png'
                 .navbar-collapse.collapse
                     ul.nav.navbar-nav
                         li
-                            a href='/' Главная
+                            a href=page_path(@conn,:index) Главная
                         li
-                            a href='/games' Игры
+                            a href=game_path(@conn,:index) Игры
                         li
-                            a href='/about' О сайте
+                            a href=page_path(@conn,:about) О сайте
         main.container role='main'
             .col-xs-12
                 .chess_block

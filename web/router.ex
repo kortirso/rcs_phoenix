@@ -14,15 +14,19 @@ defmodule RcsPhoenix.Router do
     end
 
     scope "/", RcsPhoenix do
-        pipe_through :browser # Use the default browser stack
+        pipe_through :browser
 
         get "/", PageController, :index
         get "/about", PageController, :about
 
-        resources "/games", GamesController, only: [:index, :show]
+        resources "/games", GameController, only: [:index, :show]
     end
 
     scope "/api", RcsPhoenix do
         pipe_through :api
+
+        scope "/v1", V1, as: :v1 do
+
+        end
     end
 end

@@ -1,4 +1,4 @@
-defmodule RcsPhoenix.GamesController do
+defmodule RcsPhoenix.GameController do
   use RcsPhoenix.Web, :controller
 
   def index(conn, _params) do
