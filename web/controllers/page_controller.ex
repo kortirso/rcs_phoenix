@@ -1,7 +1,11 @@
 defmodule RcsPhoenix.PageController do
-  use RcsPhoenix.Web, :controller
+    use RcsPhoenix.Web, :controller
 
-  def index(conn, _params) do
-    render conn, "index.html"
-  end
+    def index(conn, _params) do
+        render conn, "index.html"
+    end
+
+    def about(conn, _params) do
+        render conn, "about.html"
+    end
 end

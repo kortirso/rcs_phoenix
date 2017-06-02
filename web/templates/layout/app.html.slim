@@ -1,0 +1,38 @@
+doctype html
+html lang='en'
+    head
+        title Chess Battle
+        meta charset="utf-8"
+        meta http-equiv="X-UA-Compatible" content="IE=edge"
+        meta name="yandex-verification" content="460a1731f41cbf67"
+        meta name="google-site-verification" content="DBiLGZMS2JjU27lRiwwjaxZ7bjSuoMyLm6AML6_qxO0"
+        meta name="viewport" content="width=device-width, initial-scale=1"
+        meta name="description" content=""
+        meta name="author" content=""
+        link rel="stylesheet" href=static_path(@conn,"/css/app.css")
+    body
+        .inside
+            .shadow
+        header.header
+            nav.navbar.navbar-inverse.navbar-fixed-top role='navigation'
+                .navbar-header
+                    button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button"
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a href='/' class='navbar-brand'
+                        img src='images/logo.png'
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                        li
+                            a href='/' Главная
+                        li
+                            a href='/games' Игры
+                        li
+                            a href='/about' О сайте
+        main.container role='main'
+            .col-xs-12
+                .chess_block
+                    = render @view_module, @view_template, assigns
+        script src=static_path(@conn,"/js/app.js")
