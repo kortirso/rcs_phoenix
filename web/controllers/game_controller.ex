@@ -6,6 +6,6 @@ defmodule RcsPhoenix.GameController do
   end
 
   def show(conn, %{"id" => id}) do
-    render conn, "show.html"
+    render conn, "show.html", id: id
   end
 end

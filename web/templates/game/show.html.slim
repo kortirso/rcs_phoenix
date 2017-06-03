@@ -1,1 +1,23 @@
-h1 Определенная игра
+.row
+    .col-xs-12.col-md-6
+        #all_board
+            #board
+                = for r <- 8..1 do
+                    elixir:
+                        block = case rem(r, 2) do
+                            1 -> [first: 'white', second: 'black']
+                            0 -> [first: 'black', second: 'white']
+                        end
+                    .chess_row
+                        = for {c, index} <- Enum.with_index(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']) do
+                            elixir:
+                                color = case rem(index, 2) do
+                                    1 -> block[:first]
+                                    0 -> block[:second]
+                                end
+                            .square class="#{color} square-#{c}#{r}"
+                        .clearfix
+    .col-xs-12.col-md-4
+        .row#data.data-block
+            p Номер партии
+            p= "№#{@id}"

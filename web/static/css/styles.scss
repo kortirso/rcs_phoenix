@@ -103,3 +103,42 @@ body {
     padding: 20px;
     background: rgba(255, 255, 255, 0.75);
 }
+
+#all_board {
+    position: relative;
+    width: 460px;
+    height: 460px;
+    background-image: url('../images/board.png');
+    box-shadow: 0 0 10px 0 #999;
+    #board {
+        position: relative;
+        top: 30px;
+        left: 30px;
+        width: 400px;
+        box-sizing: content-box;
+        border: 1px solid #000;
+        .square {
+            float: left;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            &.white {
+                background: #f0d9b5;
+            }
+            &.black {
+                background: #b58863;
+            }
+        }
+    }
+}
+
+.data-block {
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    background: #EEE;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #999;
+    p {
+        margin: 5px 0;
+    }
+}
